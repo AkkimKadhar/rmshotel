@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <title>FOOD MASTER</title>
+
+  <link rel="stylesheet" href="/static/style/stylefm.css" />
+  
+</head>
+
+<body>
+  <form action="">
+
+    
+  
+  <center>
+
+    <div class="navbar">
+   
+      <div class="subnav">
+        <button class="subnavbtn"> Hotel <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="{% url 'hotelbooking' %}">Hotel Booking</a>
+            <a href="{% url 'roommaintenance' %}">Room Maintenance</a>
+            <a href="{% url 'roomcancellation' %}">Room Cancellation</a> 
+            <a href="{% url 'reception' %}">Reception </a>
+            <a href="{% url 'bar' %}">Bar </a>
+          </div>
+      </div>
+  <div class="subnav">
+    <button class="subnavbtn">Food <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="{% url 'bill' %}">Billing</a>
+      <a href="{% url 'Food_Mastry' %}">Food Master</a>
+      <a href="{% url 'dining' %}">Dining</a>
+      <a href="{% url 'parcel' %}">Parcel</a>
+      <a href="{% url 'online' %}">Online Orders</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Accounts <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="{% url 'Expenses_Entry' %}">Expenses Entry</a>
+      <a href="{% url 'Groceries_Entry' %}">Groceries Entry</a>
+      <a href="{% url 'Gas_Maintenance' %}">Gas Maintenance</a>
+      <a href="{% url 'Income_Entry' %}">Income Entry</a>
+    <a href="{% url 'Advertisement' %}">Advertisement</a>
+    </div>
+  </div>
+  <div class="subnav">                                             
+    <button class="subnavbtn">
+      RMS <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="subnav-content">
+      <a href="{% url 'workersapplication' %}">Workers Application </a>
+      <a href="{% url 'veseelmaintenance' %}">Vessel</a>
+      <a href="{% url 'workersattendance' %}">Workers Attendance</a>
+      <a href="{% url 'workerssalary' %}">Workers Salary</a>
+      </div>
+  </div>
+  <div class="subnav">                                     <!--  {% load static %} -->
+    <button class="subnavbtn">
+      Stocks <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="subnav-content">
+      <a href="{% url 'stockentry' %}">Stock Entry</a>
+      </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">
+      MISC. <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="subnav-content">
+      <a href="{% url 'Parking' %}">Parking</a>
+      
+      </div>
+  </div>
+  <a href="{% url 'Login_Page' %}">Logout</a>
+  </div>
+
+    <table class="dt">
+      <tr>
+        <td><label for="">DATE</label></td>
+        <td><input type="datetime-local" required></td>
+</tr>
+    </table>
+    <h1>Food Master</h1>
+    <table border="1px">
+      <tr>
+        <th>SNO</th>
+        <th>NAME OF THE FOOD</th>
+        <th>FOOD CATEGORY</th>
+        <th>PRICE OF THE FOOD</th>
+      </tr>
+      <tr>
+        <td >1</td>
+        <td><input type="text" name="foodname1" id="foodname1" required value="sambar"></td>
+        <td><select name="category1" id="category1" required>
+            <option value="">--Select--</option>
+            <option value="">BREAKFAST</option>
+            <option value="">DINNER</option>
+            <option value="">LUNCH</option>
+          </select></td>
+        <td><input type="text" value="10" required></td>
+
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><input type="text" name="foodname2" id="foodname2" required value="curd"></td>
+        <td><select name="catagory2" id="catagory2" required>
+            <option value="">--Select--</option>
+            <option value="">BREAKFAST</option>
+            <option value="">DINNER</option>
+            <option value="">LUNCH</option>
+          </select></td>
+        <td><input type="text" value="10" required></td>
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><input type="text" name="foodname3" id="foodname3" required value="lemon"></td>
+        <td><select name="catagory3" id="catagory3" required>
+            <option value="">--Select--</option>
+            <option value="">BREAKFAST</option>
+            <option value="">DINNER</option>
+            <option value="">LUNCH</option>
+          </select></td>
+        <td><input type="text" value="20" required></td>
+
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><input type="text" name="foodname4" id="foodname4" required value="briyani" ></td>
+        <td><select name="catagory4" id="catagory4" required>
+            <option value="">--Select--</option>
+            <option value="">BREAKFAST</option>
+            <option value="">DINNER</option>
+            <option value="">LUNCH</option>
+          </select></td>
+        <td><input type="text" value="10" required></td>
+
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><input type="text" name="foodname5" id="foodname5" required></td>
+        <td><select name="catagory5" id="catagory5" required>
+            <option value="">--Select--</option>
+            <option value="">BREAKFAST</option>
+            <option value="">DINNER</option>
+            <option value="">LUNCH</option>
+          </select></td>
+        <td><input type="text" value="" required></td>
+
+      </tr>
+      <tr>
+        <td>6</td> 
+        <td><input type="text" name="foodname6" id="foodname6" required ></td>
+        <td><select name="catagory6" id="catagory6">
+            <option value="">--Select--</option>
+            <option value="">BREAKFAST</option>
+            <option value="">DINNER</option>
+            <option value="">LUNCH</option>
+          </select></td>
+        <td><input type="text" value="₹"></td>
+
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><input type="text"  name="foodname7" id="foodname7" required ></td>
+        <td><select name="catagory7" id="catagory7">
+            <option value="">--Select--</option>
+            <option value="">BREAKFAST</option>
+            <option value="">DINNER</option>
+            <option value="">LUNCH</option>
+          </select></td>
+        <td><input type="text" value="₹"></td>
+
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><input type="text"></td>
+        <td><select name="catagory" id="">
+            <option value="">--Select--</option>
+            <option value="">BREAKFAST</option>
+            <option value="">DINNER</option>
+            <option value="">LUNCH</option>
+          </select></td>
+        <td><input type="text" value="₹"></td>
+
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><input type="text"> </td>
+        <td><select name="catagory" id="">
+            <option value="">--Select--</option>
+            <option value="">BREAKFAST</option>
+            <option value="">DINNER</option>
+            <option value="">LUNCH</option>
+          </select></td>
+        <td><input type="text" value="₹"></td>
+
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><input type="text"></td>
+        <td><select name="catagory" id="">
+            <option value="">--Select--</option>
+            <option value="">BREAKFAST</option>
+            <option value="">DINNER</option>
+            <option value="">LUNCH</option>
+          </select></td>
+        <td><input type="text" value="₹"></td>
+
+      </tr>
+      <tr>
+        <td>11</td>
+        <td><input type="text"></td>
+        <td><select name="catagory" id="">
+            <option value="">--Select--</option>
+            <option value="">BREAKFAST</option>
+            <option value="">DINNER</option>
+            <option value="">LUNCH</option>
+          </select></td>
+        <td><input type="text" value="₹"></td>
+
+      </tr>
+      <tr>
+        <td>12 </td>
+        <td><input type="text"></td>
+        <td><select name="catagory" id="">
+            <option value="">--Select--</option>
+            <option value="">BREAKFAST</option>
+            <option value="">DINNER</option>
+            <option value="">LUNCH</option>
+          </select></td>
+        <td><input type="text" value="₹"></td>
+
+      </tr>
+    </table>
+     
+    <br>
+
+    <input type="submit" class="btn" value="Submit">
+    <input type="reset" class="btn" value="Reset">
+  </center>
+</form>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>BILLING</title>
+    <link rel="stylesheet" href="/static/style/stylebill.css" />
+    <script src="/static/javascript/bill.js"></script>
+    
+  </head>
+
+  <body >
+    <form action="">
+      <div class="navbar">
+   
+        <div class="subnav">
+          <button class="subnavbtn"> Hotel <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+              <a href="{% url 'hotelbooking' %}">Hotel Booking</a>
+              <a href="{% url 'roommaintenance' %}">Room Maintenance</a>
+              <a href="{% url 'roomcancellation' %}">Room Cancellation</a> 
+              <a href="{% url 'reception' %}">Reception </a>
+              <a href="{% url 'bar' %}">Bar </a>
+            </div>
+        </div>
+    <div class="subnav">
+      <button class="subnavbtn">Food <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="{% url 'bill' %}">Billing</a>
+        <a href="{% url 'Food_Mastry' %}">Food Master</a>
+        <a href="{% url 'dining' %}">Dining</a>
+        <a href="{% url 'parcel' %}">Parcel</a>
+        <a href="{% url 'online' %}">Online Orders</a>
+      </div>
+    </div> 
+    <div class="subnav">
+      <button class="subnavbtn">Accounts <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="{% url 'Expenses_Entry' %}">Expenses Entry</a>
+        <a href="{% url 'Groceries_Entry' %}">Groceries Entry</a>
+        <a href="{% url 'Gas_Maintenance' %}">Gas Maintenance</a>
+        <a href="{% url 'Income_Entry' %}">Income Entry</a>
+      <a href="{% url 'Advertisement' %}">Advertisement</a>
+      </div>
+    </div>
+    <div class="subnav">                                             
+      <button class="subnavbtn">
+        RMS <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="subnav-content">
+        <a href="{% url 'workersapplication' %}">Workers Application </a>
+        <a href="{% url 'veseelmaintenance' %}">Vessel</a>
+        <a href="{% url 'workersattendance' %}">Workers Attendance</a>
+        <a href="{% url 'workerssalary' %}">Workers Salary</a>
+        </div>
+    </div>
+    <div class="subnav">                                     <!--  {% load static %} -->
+      <button class="subnavbtn">
+        Stocks <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="subnav-content">
+        <a href="{% url 'stockentry' %}">Stock Entry</a>
+        </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">
+        MISC. <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="subnav-content">
+        <a href="{% url 'Parking' %}">Parking</a>
+        
+        </div>
+    </div>
+    <a href="{% url 'Login_Page' %}">Logout</a>
+    </div>
+
+      <center><h1>Bill Details</h1>
+
+
+
+      <table border="1px" cellpadding="12" class="t1">
+        <tr>
+          <th>BILL NO</th>
+          <th>ITEM NAME</th>
+          <th>QUANTITY</th>
+          <th>PRICE</th>
+          <th>TOTAL</th>
+        </tr>
+        <tr>
+          <td rowspan="4"><input type="text" name="bill_no" id="bill_no"  required/></td>
+          <td><select name="foodlist" id="foodlist" onchange="foodprice()" required>
+            <option value="">--Select--</option>
+            <option value="Curd">Curd</option>
+            <option value="Lemon">Lemon</option>
+            <option value="Briyani">Briyani</option>
+            <option value="Diner Grill">Diner Grill</option>
+            <option value="Unique Meals">Unique Meals</option>
+            <option value="Pizza Posse">Pizza Posse</option>
+          </select></td>
+          <td><input type="text" name="quantity" id="quantity"  oninput="myFunction()" required/></td>
+          <td><input type="text" name="selectNumber" id="selectNumber" value="" required /></td>
+          <td><input type="text" name="total" id="total" required/></td>
+        </tr>
+        <tr>
+
+          <td><select name="" id="foodlist1" onchange="foodprice1()" required>
+            <option value="">--Select--</option>
+            <option value="Curd">Curd</option>
+            <option value="Lemon">Lemon</option>
+            <option value="Briyani">Briyani</option>
+            <option value="Diner Grill">Diner Grill</option>
+            <option value="Unique Meals">Unique Meals</option>
+            <option value="Pizza Posse">Pizza Posse</option>
+          </select></td>
+          <td><input type="text" name="quantity" id="quantity1"  oninput="myFunction1()" required/></td>
+          <td><input type="text" name="price" id="selectNumber1" required/></td>
+          <td><input type="text" name="total" id="total1"  required/></td>
+        </tr>
+        <tr>
+         
+          <td><select name="" id="foodlist2" onchange="foodprice2()" required>
+            <option value="">--Select--</option>
+            <option value="Curd">Curd</option>
+            <option value="Lemon">Lemon</option>
+            <option value="Briyani">Briyani</option>
+            <option value="Diner Grill">Diner Grill</option>
+            <option value="Unique Meals">Unique Meals</option>
+            <option value="Pizza Posse">Pizza Posse</option>
+          </select></td>
+          <td><input type="text" name="quantity"   id="quantity2"  oninput="myFunction2()" required/></td>
+          <td><input type="text" name="price"   id="selectNumber2" required/></td>
+          <td><input type="text" name="total" id="total2"    required/></td>
+        </tr>
+        <tr>
+ 
+          <td><select name="" id="foodlist3" onchange="foodprice3()" required>
+            <option value="">--Select--</option>
+            <option value="Curd">Curd</option>
+            <option value="Lemon">Lemon</option>
+            <option value="Briyani">Briyani</option>
+            <option value="Diner Grill">Diner Grill</option>
+            <option value="Unique Meals">Unique Meals</option>
+            <option value="Pizza Posse">Pizza Posse</option>
+          </select></td>
+          <td><input type="text" name="quantity" id="quantity3"  oninput="myFunction3()" required/></td>
+          <td><input type="text" name="price" id="selectNumber3"required /></td>
+          <td><input type="text" name="total" id="total3"  required/></td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center" class="tol" > Total</td>
+          <td><input type="number" name="finalamt" id="finalamt"></td>
+        </tr>
+      </table>
+    </center>
+    
+      <br />
+     
+      <br />
+
+      <div class="lpay">
+        <table border="10px">
+          <tr>
+            <th><label for="" name="gst" id="gst">GST</label></th>
+            <td><select name="gstval" id="gstval" onchange="gst()" required>
+              <option value="">--Select--</option>
+              <option value=5>5%</option>
+              <option value=12>12%</option>
+              <option value=18>18%</option>
+            </select></td>
+          </tr>
+          <tr>
+            <th>
+              <label for="" name="net" id="net" class="fname"
+                >NET TOTAL</label
+              >
+            </th>
+            <td><input type="text" id="nettol" name="nettol" required/></td>
+          </tr>
+          <tr>
+            <th><label for="" name="pay" id="pay">MODE OF PAYMENT</label></th>
+            <td>
+              <select name="payment" id="payment" required>
+                <option value="">--Select--</option>
+                <option value="">CASH</option>
+                <option value="">CARD</option>
+                <option value="">UPI</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </div>
+    
+
+      <br />
+      <center>
+        <input type="submit" class="btn" value="Submit" />
+        <input type="reset" class="btn" value="Reset" />
+      </center>
+    </form>
+    
+  </body>
+</html>

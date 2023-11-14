@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN PAGE</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url("/static/images/hotel.jpg");
+        
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .d1 {
+        color: #fff;
+      }
+
+      .d2 {
+        height: 25px;
+        font-size: 17px;
+        width: 180px;
+        text-align: center;
+      }
+      h1 {
+        color: #fff;
+        margin-top: 210px;
+        margin-bottom: 20px;
+      }
+      input {
+        height: 25px;
+        font-size: 17px;
+        width: 180px;
+      }
+      td {
+        padding: 10px;
+      }
+      table,tr,td{
+        border: solid 2px black;
+        border-color: #bd692d;
+        border-collapse: collapse;
+      }
+      button {
+        background-color: #f7d56a;
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+        color: rgb(87, 57, 18);
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="hotelbooking">
+      <center>
+        <h1>Login</h1>
+        <table border="1" cellpadding="10" class="d1">
+          <tr>
+            <td>
+              <label for="">Username</label>
+            </td>
+            <td>
+              <input type="text" name="username" id="username" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">Password</label>
+            </td>
+            <td>
+              <input type="password" name="password" id="password" required/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">Department</label>
+            </td>
+            <td>
+              <select name="department" id="department" class="d2" required>
+                <option value="">-select-</option>
+                <option value="RMS">RMS</option>
+                <option value="HMS">HMS</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <button type="submit" >Submit</button>
+        <button type="reset">Reset</button>
+        <a href="registration" style="font-size: 20px; color:#fff; margin-left:30px ;">Register</a>
+      </center>
+      <span> </span>
+    </form>
+  </body>
+</html>

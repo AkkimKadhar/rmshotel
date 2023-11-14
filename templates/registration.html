@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REGISTRATION</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+      
+      .navbar {
+        overflow: hidden;
+        background-color: #333; 
+      }
+      
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      .subnav {
+        float: left;
+        overflow: hidden;
+      }
+      
+      .subnav .subnavbtn {
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+      
+      .navbar a:hover, .subnav:hover .subnavbtn {
+        background-color: red;
+      }
+      
+      .subnav-content {
+        display: none;
+        position: absolute;
+        left: 0;
+        background-color: red;
+        width: 100%;
+        z-index: 1;
+      }
+      
+      .subnav-content a {
+        float: left;
+        color: white;
+        text-decoration: none;
+      }
+      
+      .subnav-content a:hover {
+        background-color: #eee;
+        color: black;
+      }
+      
+      .subnav:hover .subnav-content {
+        display: block;
+      }
+      body{
+        background:url(/static/images/hotel.jpg) no-repeat ;height:950px;
+        background-size: cover;
+      }
+    
+
+
+.table{
+margin-top: 50px;
+margin-left: 30%;
+margin-right: 30%;
+
+
+}
+
+
+.col-2 {
+float: left;
+width: 50%;
+margin-top: 6px;
+text-align: left;
+color: red;
+}
+
+.col-3 {
+float: left;
+width: 50%;
+margin-top: 6px;
+
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+input {
+width: 100%;
+padding: 5px;
+border-radius: 10px;
+border: none;
+}
+
+.row{
+margin: 2px;
+}
+.btn{
+background-color:#ffe6a7;
+border: none;
+border-radius: 5px;
+width: 100px;
+height: 30px;
+margin-right: 20px;
+}
+.btn{
+margin-top: 15px;
+}
+input[type=submit]:hover {
+background-color: burlywood;
+border: none;
+border-radius: 10px;
+}
+input[type=reset]:hover {
+background-color: burlywood;
+border: none;
+border-radius: 10px;
+}
+h1{
+  color: tomato;
+  margin-top: 5%;
+}
+select{
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+textarea{
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+
+
+.table {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+input {
+  width: 100%
+}
+
+.col-2 {
+  float: left;
+  width: 65%;
+  margin-top: 6px;
+}
+
+.col-3 {
+  float: left;
+  width: 35%;
+  margin-top: 6px;
+}
+
+}
+
+  
+      </style>
+  </head>
+  <body>
+    
+    
+    
+  <form action="">
+    <center>
+      <h1>REGISTRATION</h1>
+      <form>
+        <div class="table" style="font-weight:bolder;">
+          <div class="row"  style="font-weight: bolder;">
+            <div class="col-2" >
+              ENTER THE HOTEL NAME:
+            </div>
+            <div class="col-3" >
+              <input type="text" name="hotelname" id="hotelname" placeholder="ENTER THE HOTEL NAME" required>
+            </div>
+          
+          </div>
+          <div class="row">
+            <div class="col-2">
+              GST N0:
+            </div>
+            <div class="col-3">
+              <input type="number" name="gstno" id="gstno" placeholder="ENTER THE GST NO" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">
+              ADDRESS:
+            </div>
+            <div class="col-3">
+              <textarea name="address" id="address"  required></textarea>
+            </div>
+           
+          </div>
+          <div class="row">
+            <div class="col-2">
+              GMAIL:
+            </div>
+            <div class="col-3">
+              <input type="mail" name="email" id="email" placeholder="ENTER YOUR EMAIL" required>
+            </div>
+           
+          </div>
+          <div class="row">
+            <div class="col-2">
+              USERNAME:
+            </div>
+            <div class="col-3">
+              <input type="text" name="username" id="username" placeholder="ENTER THE USERNAME"  required>
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col-2">
+              PASSWORD:
+            </div>
+            <div class="col-3">
+              <input type="password" name="password" id="password" placeholder="ENTER YOUR PASSWORD" required>
+            </div>
+           
+          </div>
+          <div class="row">
+            <div class="col-2">
+              SELECT THE MANAGEMENT:
+            </div>
+            <div class="col-3">
+              <select name="category" id="category"  required>
+                <option value="">--Select--</option>
+                <option value="">HMS</option>
+                <option value="">RMS</option>
+              
+              </select>
+            </div>
+          </div>
+        </div>
+          
+      <input type="submit"  class="btn"value="submit" />
+      <input type="reset" class="btn" value="reset " />
+    </center>
+  </form>
+  </body>
+</html>

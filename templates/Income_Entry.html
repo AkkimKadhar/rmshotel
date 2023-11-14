@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Entry</title>
+    
+    <link rel="stylesheet" href="/static/style/styles_IE.css" />
+    <style>
+      body{
+                background:url(/static/images/hotel.jpg)  ;
+        
+            }
+    </style>
+</head>
+<body>
+  <div class="navbar">
+   
+    <div class="subnav">
+      <button class="subnavbtn"> Hotel <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+          <a href="{% url 'hotelbooking' %}">Hotel Booking</a>
+          <a href="{% url 'roommaintenance' %}">Room Maintenance</a>
+          <a href="{% url 'roomcancellation' %}">Room Cancellation</a> 
+          <a href="{% url 'reception' %}">Reception </a>
+          <a href="{% url 'bar' %}">Bar </a>
+        </div>
+    </div>
+<div class="subnav">
+  <button class="subnavbtn">Food <i class="fa fa-caret-down"></i></button>
+  <div class="subnav-content">
+    <a href="{% url 'bill' %}">Billing</a>
+    <a href="{% url 'Food_Mastry' %}">Food Master</a>
+    <a href="{% url 'dining' %}">Dining</a>
+    <a href="{% url 'parcel' %}">Parcel</a>
+    <a href="{% url 'online' %}">Online Orders</a>
+  </div>
+</div> 
+<div class="subnav">
+  <button class="subnavbtn">Accounts <i class="fa fa-caret-down"></i></button>
+  <div class="subnav-content">
+    <a href="{% url 'Expenses_Entry' %}">Expenses Entry</a>
+    <a href="{% url 'Groceries_Entry' %}">Groceries Entry</a>
+    <a href="{% url 'Gas_Maintenance' %}">Gas Maintenance</a>
+    <a href="{% url 'Income_Entry' %}">Income Entry</a>
+  <a href="{% url 'Advertisement' %}">Advertisement</a>
+  </div>
+</div>
+<div class="subnav">                                             
+  <button class="subnavbtn">
+    RMS <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="subnav-content">
+    <a href="{% url 'workersapplication' %}">Workers Application </a>
+    <a href="{% url 'veseelmaintenance' %}">Vessel</a>
+    <a href="{% url 'workersattendance' %}">Workers Attendance</a>
+    <a href="{% url 'workerssalary' %}">Workers Salary</a>
+    </div>
+</div>
+<div class="subnav">                                     <!--  {% load static %} -->
+  <button class="subnavbtn">
+    Stocks <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="subnav-content">
+    <a href="{% url 'stockentry' %}">Stock Entry</a>
+    </div>
+</div>
+<div class="subnav">
+  <button class="subnavbtn">
+    MISC. <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="subnav-content">
+    <a href="{% url 'Parking' %}">Parking</a>
+    
+    </div>
+</div>
+<a href="{% url 'Login_Page' %}">Logout</a>
+</div>
+    <form action="">
+        <center>
+            <h1 class="header"  >Income Entry</h1>
+            <h2 class="header2"> Hotel </h2>
+            <table  border="2" class="d1">
+              <tr>
+                <th>
+                  S.NO
+                </th>
+                <th>
+                  PARTICULARS
+                </th>
+                <th>
+                  DETAILS
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  1.
+                </td>
+                <td>
+                    Room Booking
+                </td>
+                <td>
+                  <input type="number" name="roombook" id="roombook" required>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  2.
+                </td>
+                <td>
+                    Date
+                </td>
+                <td>
+                   <input type="date" name="date1" itemid="date1" required>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  3.
+                </td>
+                <td>
+                    Amount
+                </td>
+                <td>
+                  <input type="number" name="amount" id="amount" required>
+                </td>
+              </tr>
+            </table>
+        </center>     
+      </form>
+      <form action="">
+        <center>
+            <h2 class="header2"> Restaurant </h2>
+            <table class="d1">
+              <tr>
+                <th>
+                  S.NO
+                </th>
+                <th>
+                  PARTICULARS
+                </th>
+                <th>
+                  DETAILS
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  1.
+                </td>
+                <td>
+                  Bill Of Income
+                </td>
+                <td>
+                  <input type="number" name="bill" id="bill" required>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  2.
+                </td>
+                <td>
+                    Date
+                </td>
+                <td>
+                   <input type="date" name="date2" id="date2" required>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  3.
+                </td>
+                <td>
+                    Amount
+                </td>
+                <td>
+                  <input type="number" name="amount" id="amount" required>
+                </td>
+              </tr>
+            </table>
+            <button class="button" id="submitbutton" type="submit">Submit</button>
+            <button class="button" id="resetbutton" type="reset">Reset</button>
+        </center> 
+      </form>
+</body>
+</html>

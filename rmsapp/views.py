@@ -1,0 +1,50 @@
+from django.shortcuts import render
+
+def login(request):
+    return render(request,'Login_Page.html')
+def registration(request):
+    return render(request,'registration.html')
+def hotelbooking(request):
+    return render(request,'hotelbooking.html')
+def roommaintenance(request):
+    return render(request,'roommaintenance.html')
+def roomcancellation(request):
+    return render(request,'roomcancellation.html')
+def reception(request):
+    return render(request,'reception.html')
+def bar(request):
+    return render(request,'bar.html')
+def bill(request):
+    return render(request,'bill.html')
+def Food_Mastry(request):
+    return render(request,'Food_Mastry.html')
+def dining(request):
+    return render(request,'dining.html')
+def parcel(request):
+    return render(request,'parcel.html')
+def online(request):
+    return render(request,'online.html')
+def Expenses_Entry(request):
+    return render(request,'Expenses_Entry.html')
+def Groceries_Entry(request):
+    return render(request,'Groceries_Entry.html')
+def Gas_Maintenance(request):
+    return render(request,'Gas_Maintenance.html')
+def Income_Entry(request):
+    return render(request,'Income_Entry.html')
+def Advertisement(request):
+    return render(request,'Advertisement.html')
+def workersapplication(request):
+    return render(request,'workersapplication.html')
+def veseelmaintenance(request):
+    return render(request,'veseelmaintenance.html')
+def workersattendance(request):
+    return render(request,'workersattendance.html')
+def workerssalary(request):
+    return render(request,'workerssalary.html')
+def stockentry(request):
+    return render(request,'stockentry.html')
+def Parking(request):
+    return render(request,'Parking.html')
+def Login_Page(request):
+    return render(request,'Login_Page.html')
